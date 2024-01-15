@@ -23,3 +23,11 @@ jobs:
     
     - name: Run script to process images
       run: python process_images.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'Tu Nombre'
+        git config --global user.email 'tu-email@example.com'
+        git add .
+        git commit -m "Optimizar imágenes"
+        git push
