@@ -1,0 +1,25 @@
+name: Process Images
+
+on:
+  push:
+    paths:
+      - '**.jpg'
+      - '**.png'
+
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    
+    - name: Install Pillow
+      run: pip install Pillow
+    
+    - name: Run script to process images
+      run: python process_images.py
