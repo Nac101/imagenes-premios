@@ -5,7 +5,7 @@ def process_image(file_path):
     with Image.open(file_path) as img:
         # Calcular la nueva altura manteniendo la proporción
         new_height = int((190.0 / img.width) * img.height)
-        img = img.resize((190, new_height), Image.ANTIALIAS)
+        img = img.resize((190, new_height), Image.Resampling.LANCZOS)
         img.save(file_path)
 
 for root, _, files in os.walk('.'):
