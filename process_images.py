@@ -13,4 +13,4 @@ for root, _, files in os.walk('.'):
         if file.endswith(('.jpg', '.png')):
             process_image(os.path.join(root, file))
 
-print("Procesamiento de imágenes completado.")
+print("Procesamiento de imágenes completado!")
