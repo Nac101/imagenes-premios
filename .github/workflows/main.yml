@@ -31,4 +31,4 @@ jobs:
         git pull
         git add .
         git commit -m "Optimizar imágenes"
-        git push
+        git push --force
