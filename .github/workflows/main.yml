@@ -28,7 +28,8 @@ jobs:
       run: |
         git config --global user.name 'Ignacio Olmedo'
         git config --global user.email 'iolmedo@filadd.com'
-        git pull
+        git pull origin main
         git add .
         git commit -m "Optimizar imágenes"
-        git push --force
+        git push https://${{ secrets.MY_GITHUB_TOKEN }}@github.com/Nac101/imagenes-premios.git main
+
