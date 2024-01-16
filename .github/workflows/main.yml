@@ -34,5 +34,4 @@ jobs:
         git add .
         git commit -m "Optimizar imágenes"
         git pull origin main
-        git push --force https://${{ secrets.MY_GITHUB_TOKEN }}@github.com/Nac101/imagenes-premios.git main
-
+        git push -f origin master
