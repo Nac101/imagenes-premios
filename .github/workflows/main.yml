@@ -33,4 +33,4 @@ jobs:
         git pull
         git add .
         git commit -m "Optimizar imágenes"
-        git push -f origin master
+        git push
